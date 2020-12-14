@@ -267,7 +267,7 @@ Both those methods don't change the state.
 def get_dy(i: int128, j: int128, dx: uint256) -> uint256:
 ```
 
-How much of c-token `j` you'll get in exchange for `dx` of c-token `i`,
+How much of token `j` you'll get in exchange for `dx` of token `i`,
 including the fee. For example, `get_dy(0, 1, dx)` will give you amount of cUSDC
 you'll get for `dx` of cDAI.
 
@@ -291,10 +291,9 @@ This method doesn't change the state.
 def exchange(i: int128, j: int128, dx: uint256, min_dy: uint256):
 ```
 
-This method exchanges `dx` of c-token `i` into c-token `j`.
-You specify `min_dy` as the minimal amount of c-token `j` to get to avoid
-front-running. You can also use `deadline` to make transaction revert if it
-wasn't accepted for too long.
+This method exchanges `dx` of token `i` into token `j`.
+You specify `min_dy` as the minimal amount of token `j` to get to avoid
+front-running.
 
 Used to exchange `cDAI<>cUSDC` (and analogues in future deployments).
 
